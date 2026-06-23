@@ -11,6 +11,7 @@ public class GMS_Won : IState
     {
         // play win tune
         InputManager.instance.ChangeState(InputStates.WON);
+        InputManager.instance.RestartAction += _gm.EnterPlay;
     }
 
     public void Execute()
@@ -21,5 +22,6 @@ public class GMS_Won : IState
     public void Exit()
     {
         // if win tune is still running kill it
+        InputManager.instance.RestartAction -= _gm.EnterPlay;
     }
 }

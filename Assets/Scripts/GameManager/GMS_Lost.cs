@@ -11,6 +11,7 @@ public class GMS_Lost : IState
     {
         // play lost tune
         InputManager.instance.ChangeState(InputStates.LOST);
+        InputManager.instance.RestartAction += _gm.EnterPlay;
     }
 
     public void Execute()
@@ -21,5 +22,6 @@ public class GMS_Lost : IState
     public void Exit()
     {
         // if lost tune is still running, kill it
+        InputManager.instance.RestartAction -= _gm.EnterPlay;
     }
 }

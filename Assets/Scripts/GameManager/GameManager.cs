@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] IState initalState;
     [HideInInspector] public GameManager instance;
     public GMStateManager GMSM;
+    private int floorNum = 1;
+    [SerializeField] private float floorSize;
+    [SerializeField] private int totalFloors;
+    [SerializeField] private GameObject[] prefabFloors;
+    [HideInInspector] public List<GameObject> CurrentFloors;
+    [HideInInspector] public bool Finished;
+    private GameObject _newFloor;
+    private int _randomNum;
+    [HideInInspector] public float SpawnDistance => (floorNum - 5) * floorSize;
     void Awake()
     {
         if (instance == null) instance = this;
@@ -28,5 +38,21 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
         GMSM.ChangeState(GMSM.statePlaying);
+    }
+
+    public void SpawnANewFloor()
+    {
+        floorNum++;
+        if (floorNum >= totalFloors) 
+        {
+            _newFloor = Instantiate(prefabFloors[0], new Vector3(0,floorNum * floorSize), Quaternion.identity);
+            Finished = true;
+        }
+        else
+        {
+            _randomNum = Random.Range(1, prefabFloors.Length);
+            _newFloor = Instantiate(prefabFloors[_randomNum], new Vector3(0, floorNum * floorSize), Quaternion.identity);
+        }
+        CurrentFloors.Add(_newFloor);
     }
 }

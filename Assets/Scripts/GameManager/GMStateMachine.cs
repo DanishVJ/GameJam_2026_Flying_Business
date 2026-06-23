@@ -28,12 +28,14 @@ public class GMStateManager
         currentState.Exit();
         currentState = state;
         state.Enter();
+        
     }
 
     public void Execute()
     {
         currentState.Execute();
     }
+    
 
 
 }

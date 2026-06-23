@@ -17,7 +17,6 @@ public class InputManager : MonoBehaviour
     }
     void OnEnable()
     {
-        ChangeState(InputStates.PLAYING);
     }
 
 
@@ -34,7 +33,11 @@ public class InputManager : MonoBehaviour
         }
         else if (_currentInputState == InputStates.LOST)
         {
-            RestartAction.Invoke();
+            RestartAction?.Invoke();
+        }
+        else if (_currentInputState == InputStates.WON)
+        {
+            RestartAction?.Invoke();
         }
         else if (_currentInputState == InputStates.PLAYING)
         {

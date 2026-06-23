@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxDistanceFromCenter;
     private bool _isFlying = false;
     private float _turnDirection;
+
+    public System.Action PlayerDied;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,6 +56,10 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Clamp(transform.rotation.eulerAngles.z, 180-maxTurnAngle, 180+maxTurnAngle));
         if (transform.position.x < -maxDistanceFromCenter) transform.position += 2*maxDistanceFromCenter * Vector3.right;
         if (transform.position.x > maxDistanceFromCenter) transform.position -= 2*maxDistanceFromCenter * Vector3.right;
+    }
+    public void Die()
+    {
+        PlayerDied?.Invoke();
     }
     
 
