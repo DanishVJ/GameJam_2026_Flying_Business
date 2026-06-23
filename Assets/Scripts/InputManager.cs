@@ -10,7 +10,7 @@ public class InputManager : MonoBehaviour
     public System.Action<float> FlyAction;
     public System.Action<float> TurnAction;
     public static InputManager instance;
-    void Start()
+    void Awake()
     {
         if (instance == null) { instance = this; }
         else Destroy(gameObject);
@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
     }
 
 
-    private void ChangeState(InputStates state)
+    public void ChangeState(InputStates state)
     {
         _currentInputState = state;
     }
