@@ -14,8 +14,7 @@ public class GMS_Playing : IState
     {
         // play playing music
         InputManager.instance.ChangeState(InputStates.PLAYING);
-        _gm.CurrentFloors.Clear();
-        _gm.ResetFloorNum();
+        
         SceneManager.sceneLoaded += EnterAfterLoad;
         _gm.Finished = false;
         
@@ -40,10 +39,13 @@ public class GMS_Playing : IState
     }
     public void EnterAfterLoad(Scene scene, LoadSceneMode mode)
     {
+        _gm.CurrentFloors.Clear();
+        _gm.ResetFloorNum();
         _gm.SpawnANewFloor();
         _gm.SpawnANewFloor();
         _player = GameObject.FindWithTag("Player");
         _player.GetComponent<PlayerController>().PlayerDied += PlayerDied;
+        
     }
 
     public void PlayerDied()
