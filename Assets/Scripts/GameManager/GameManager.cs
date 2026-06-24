@@ -55,4 +55,8 @@ public class GameManager : MonoBehaviour
         }
         CurrentFloors.Add(_newFloor);
     }
+    public void ResetFloorNum()
+    {
+        floorNum = 1;
+    }
 }
