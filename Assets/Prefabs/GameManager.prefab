@@ -63,8 +63,15 @@ MonoBehaviour:
   totalFloors: 30
   prefabFloors:
   - {fileID: 7594232591122265194, guid: db0e2a73551c84045ae8ae2dd0abb22a, type: 3}
+  - {fileID: 7594232591122265194, guid: d72dc3a8db3004246bdd2b02fdff7bf2, type: 3}
+  - {fileID: 7594232591122265194, guid: 96f3aa74421e9144f8520ac0acf5458c, type: 3}
+  - {fileID: 7594232591122265194, guid: 23ab4757e0b972a4cac6c91d9c15bda4, type: 3}
+  - {fileID: 7594232591122265194, guid: 93ceff0dcee3f3847bf5ada5dc206af0, type: 3}
   - {fileID: 7594232591122265194, guid: b868a361126e9154a9239e4fb2c6f839, type: 3}
-  - {fileID: 7594232591122265194, guid: a438f775241d28e4892995a2d2c6bda0, type: 3}
+  - {fileID: 7594232591122265194, guid: 8f8b441615b00b540aaddf6ff6be335f, type: 3}
+  - {fileID: 7594232591122265194, guid: 967275218bc2d194dbb6be9624ef9acb, type: 3}
+  - {fileID: 7594232591122265194, guid: 771b9b45d4dc4fd409176f4ba05c0a9c, type: 3}
+  - {fileID: 7594232591122265194, guid: b575a156a4869b64397e0e6c8e7ea535, type: 3}
   CurrentFloors: []
   Finished: 0
 --- !u!114 &5795122565923516536

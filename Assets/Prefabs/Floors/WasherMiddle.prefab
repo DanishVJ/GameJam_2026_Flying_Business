@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2294670726861009503}
   - component: {fileID: 556088601229230362}
   m_Layer: 0
-  m_Name: BackgroundModular_1080x256_V1_0
+  m_Name: WasherMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7582029366579066413, guid: 3485ba124f3430643968f3d09d6e0631, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7582029366579066413, guid: 3485ba124f3430643968f3d09d6e0631, type: 3}
       propertyPath: m_LocalPosition.y
