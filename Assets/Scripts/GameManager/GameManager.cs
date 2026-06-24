@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
         GMSM.ChangeState(GMSM.statePlaying);
     }
+    
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game has closed!");
+    }
 
     public void SpawnANewFloor()
     {
