@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   instance: {fileID: 0}
   floorSize: 2
-  totalFloors: 10
+  totalFloors: 30
   prefabFloors:
   - {fileID: 7594232591122265194, guid: db0e2a73551c84045ae8ae2dd0abb22a, type: 3}
   - {fileID: 7594232591122265194, guid: b868a361126e9154a9239e4fb2c6f839, type: 3}

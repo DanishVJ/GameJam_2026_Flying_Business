@@ -15,6 +15,7 @@ public class GMS_Playing : IState
         // play playing music
         InputManager.instance.ChangeState(InputStates.PLAYING);
         _gm.CurrentFloors.Clear();
+        _gm.ResetFloorNum();
         SceneManager.sceneLoaded += EnterAfterLoad;
         _gm.Finished = false;
         
