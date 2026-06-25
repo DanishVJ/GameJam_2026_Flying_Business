@@ -396,6 +396,63 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1001 &615198953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294670726861009503, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594232591122265194, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+      propertyPath: m_Name
+      value: BirdFlock
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +648,7 @@ MonoBehaviour:
   turnSpeed: 40
   maxTurnAngle: 60
   maxDistanceFromCenter: 4
+  _particle: {fileID: 0}
 --- !u!61 &939863419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1258,6 +1316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 2911023575615589000, guid: 02a19aeee8999a44ca9d47c5190c4e1c, type: 3}
+      propertyPath: speed
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 6350783106471301769, guid: 02a19aeee8999a44ca9d47c5190c4e1c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -1318,3 +1380,4 @@ SceneRoots:
   - {fileID: 1666288111}
   - {fileID: 6941807809884892367}
   - {fileID: 5105992477961200993}
+  - {fileID: 615198953}

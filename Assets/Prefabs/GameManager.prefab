@@ -58,7 +58,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98a03b7bdef5e74186993770362252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  instance: {fileID: 0}
   floorSize: 2
   totalFloors: 30
   prefabFloors:
@@ -72,8 +71,10 @@ MonoBehaviour:
   - {fileID: 7594232591122265194, guid: 967275218bc2d194dbb6be9624ef9acb, type: 3}
   - {fileID: 7594232591122265194, guid: 771b9b45d4dc4fd409176f4ba05c0a9c, type: 3}
   - {fileID: 7594232591122265194, guid: b575a156a4869b64397e0e6c8e7ea535, type: 3}
+  - {fileID: 7594232591122265194, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
   CurrentFloors: []
   Finished: 0
+  MaxPlayerHeight: 0
 --- !u!114 &5795122565923516536
 MonoBehaviour:
   m_ObjectHideFlags: 0

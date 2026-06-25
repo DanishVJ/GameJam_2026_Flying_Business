@@ -8,8 +8,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed;
     [SerializeField] private float maxTurnAngle;
     [SerializeField] private float maxDistanceFromCenter;
+    [SerializeField] private ParticleSystem _particle;
     private bool _isFlying = false;
     private float _turnDirection;
+    private bool _hasDied = false;
 
     public System.Action PlayerDied;
 
@@ -59,7 +61,13 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
-        PlayerDied?.Invoke();
+        if (!_hasDied)
+        {
+            PlayerDied?.Invoke();
+            speed = speed / 2;
+            _hasDied = true;
+            _particle.Play();
+        }
     }
     
 

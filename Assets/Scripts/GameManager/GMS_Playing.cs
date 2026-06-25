@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,11 +23,16 @@ public class GMS_Playing : IState
 
     public void Execute()
     {
-        if (_player != null && !_gm.Finished) 
+        if (_player != null) 
         {
-            if (_player.transform.position.y > _gm.SpawnDistance)
+            if (_player.transform.position.y > _gm.SpawnDistance && !_gm.Finished)
             {
                 _gm.SpawnANewFloor();
+            }
+            if (_player.transform.position.y > _gm.MaxPlayerHeight)
+            {
+                _gm.MaxPlayerHeight = _player.transform.position.y;
+                _gm.NewMaxHeight?.Invoke(_gm.MaxPlayerHeight);
             }
         }
     }

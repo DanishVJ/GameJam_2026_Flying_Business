@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] IState initalState;
-    [HideInInspector] public GameManager instance;
+    public static GameManager instance;
     public GMStateManager GMSM;
     private int floorNum = 1;
     [SerializeField] private float floorSize;
@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool Finished;
     private GameObject _newFloor;
     private int _randomNum;
+    [HideInInspector] public float MaxPlayerHeight;
+    public System.Action<float> NewMaxHeight;
     [HideInInspector] public float SpawnDistance => (floorNum - 5) * floorSize;
     void Awake()
     {
@@ -64,5 +66,6 @@ public class GameManager : MonoBehaviour
     public void ResetFloorNum()
     {
         floorNum = 1;
+        MaxPlayerHeight = 1.2f;
     }
 }
