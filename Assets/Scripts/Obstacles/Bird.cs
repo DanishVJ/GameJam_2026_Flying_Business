@@ -4,7 +4,7 @@ public class Bird : MonoBehaviour
 {
 
     [SerializeField] private GameObject bird;
-    [SerializeField] private int speed;
+    [SerializeField] private float speed;
     [SerializeField] private float birdMaxDistance;
     void Update()
     {
