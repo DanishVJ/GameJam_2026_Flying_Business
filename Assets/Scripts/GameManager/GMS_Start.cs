@@ -1,4 +1,3 @@
-using UnityEngine;
 
 public class GMS_Start : IState
 {

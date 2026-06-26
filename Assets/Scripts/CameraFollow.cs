@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Splines.Interpolators;
 
 public class CameraFollow : MonoBehaviour
 {
