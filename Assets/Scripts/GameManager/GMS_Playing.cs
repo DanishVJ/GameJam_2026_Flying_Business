@@ -5,6 +5,7 @@ public class GMS_Playing : IState
 {
     private GameManager _gm;
     private GameObject _player;
+    private bool _sceneHasLoaded = false;
     public GMS_Playing(GameManager GM)
     {
         _gm = GM;
@@ -21,7 +22,7 @@ public class GMS_Playing : IState
 
     public void Execute()
     {
-        if (_player != null) 
+        if (_player != null && _sceneHasLoaded) 
         {
             if (_player.transform.position.y > _gm.SpawnDistance && !_gm.Finished)
             {
@@ -32,7 +33,7 @@ public class GMS_Playing : IState
                 _gm.MaxPlayerHeight = _player.transform.position.y;
                 _gm.NewMaxHeight?.Invoke(_gm.MaxPlayerHeight);
             }
-            if (_player.transform.position.y > _gm.floorSize * _gm.totalFloors)
+            if (_player.transform.position.y > _gm.floorSize * _gm.totalFloors && _gm.Finished)
             {
                 _gm.GMSM.ChangeState(_gm.GMSM.stateWon);
                 _player.GetComponent<PlayerController>().GameWon(_gm.CurrentFloors[_gm.CurrentFloors.Count -1].transform.position);
@@ -56,6 +57,7 @@ public class GMS_Playing : IState
         _gm.SpawnANewFloor();
         _player = GameObject.FindWithTag("Player");
         _player.GetComponent<PlayerController>().PlayerDied += PlayerDied;
+        _sceneHasLoaded = true;
         
     }
 
