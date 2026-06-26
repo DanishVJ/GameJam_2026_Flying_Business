@@ -252,7 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaefc686fd390d44d9a52b885bae5f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  MusicSounds: []
+  MusicSounds:
+  - Name: Music
+    Clip: {fileID: 8300000, guid: 28d1d2eecc8f7d5429e3da45e2124709, type: 3}
   SFX:
   - Name: Papers
     Clip: {fileID: 8300000, guid: 91552f629319f3a448e5b09152abac5e, type: 3}

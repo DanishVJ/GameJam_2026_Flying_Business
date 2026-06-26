@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectThrower
   throwableObject: {fileID: 1190842384435321114}
-  timeBeforeThrowing: 6
+  timeBeforeThrowing: 5
   timeoutTime: 5
   throwSpeed: 1
   targetsPlayer: 0

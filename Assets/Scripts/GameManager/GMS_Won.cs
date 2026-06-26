@@ -1,4 +1,6 @@
 
+using System.Collections;
+
 public class GMS_Won : IState
 {
     private GameManager _gm;
@@ -11,6 +13,7 @@ public class GMS_Won : IState
         // play win tune
         InputManager.instance.ChangeState(InputStates.WON);
         InputManager.instance.RestartAction += _gm.EnterPlay;
+        _gm.WinEvent?.Invoke();
     }
 
     public void Execute()

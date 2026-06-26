@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private bool _isFlying = false;
     private float _turnDirection;
     public bool IsDead;
+    private bool _won;
+    private Vector3 _winPosition;
 
     public System.Action PlayerDied;
 
@@ -53,11 +55,18 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_isFlying) { rb.linearVelocity += -speed * Time.fixedDeltaTime * new Vector2(transform.up.x, transform.up.y); }
-        rb.angularVelocity = -turnSpeed * _turnDirection;
-        transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Clamp(transform.rotation.eulerAngles.z, 180-maxTurnAngle, 180+maxTurnAngle));
-        if (transform.position.x < -maxDistanceFromCenter) transform.position += 2*maxDistanceFromCenter * Vector3.right;
-        if (transform.position.x > maxDistanceFromCenter) transform.position -= 2*maxDistanceFromCenter * Vector3.right;
+        if (!_won)
+        {
+            if (_isFlying) { rb.linearVelocity += -speed * Time.fixedDeltaTime * new Vector2(transform.up.x, transform.up.y); }
+            rb.angularVelocity = -turnSpeed * _turnDirection;
+            transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Clamp(transform.rotation.eulerAngles.z, 180 - maxTurnAngle, 180 + maxTurnAngle));
+            if (transform.position.x < -maxDistanceFromCenter) transform.position += 2 * maxDistanceFromCenter * Vector3.right;
+            if (transform.position.x > maxDistanceFromCenter) transform.position -= 2 * maxDistanceFromCenter * Vector3.right;
+        }
+        else
+        {
+            transform.position = new Vector3(Mathf.Lerp(transform.position.x, _winPosition.x,0.1f), Mathf.Lerp(transform.position.y, _winPosition.y, 0.1f),0);
+        }
     }
     public void Die()
     {
@@ -73,6 +82,14 @@ public class PlayerController : MonoBehaviour
         AudioManager.instance.PlaySFX("Falling");
 
     }
+
+    public void GameWon(Vector3 winPosition)
+    {
+        rb.gravityScale = 0;
+        rb.linearDamping = 0;
+        _won = true;
+        _winPosition = winPosition;
+    }    
 
 
 }

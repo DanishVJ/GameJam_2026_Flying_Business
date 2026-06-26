@@ -15,7 +15,7 @@ public class GMS_Playing : IState
         InputManager.instance.ChangeState(InputStates.PLAYING);
         
         SceneManager.sceneLoaded += EnterAfterLoad;
-        
+        AudioManager.instance.PlayMusic("Music");
         
     }
 
@@ -32,6 +32,11 @@ public class GMS_Playing : IState
                 _gm.MaxPlayerHeight = _player.transform.position.y;
                 _gm.NewMaxHeight?.Invoke(_gm.MaxPlayerHeight);
             }
+            if (_player.transform.position.y > _gm.floorSize * _gm.totalFloors)
+            {
+                _gm.GMSM.ChangeState(_gm.GMSM.stateWon);
+                _player.GetComponent<PlayerController>().GameWon(_gm.CurrentFloors[_gm.CurrentFloors.Count -1].transform.position);
+            }
         }
     }
 
@@ -40,6 +45,7 @@ public class GMS_Playing : IState
         // end playing music
         SceneManager.sceneLoaded -= EnterAfterLoad;
         _player.GetComponent<PlayerController>().PlayerDied -= PlayerDied;
+        AudioManager.instance.SFXSource.Stop();
     }
     public void EnterAfterLoad(Scene scene, LoadSceneMode mode)
     {

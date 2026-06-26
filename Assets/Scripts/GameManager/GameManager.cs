@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GMStateManager GMSM;
     private int floorNum = 1;
-    [SerializeField] private float floorSize;
-    [SerializeField] private int totalFloors;
+    [SerializeField] public float floorSize;
+    [SerializeField] public int totalFloors;
     [SerializeField] private GameObject[] prefabFloors;
     [HideInInspector] public List<GameObject> CurrentFloors;
     [HideInInspector] public bool Finished;
@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public float MaxPlayerHeight;
     public System.Action<float> NewMaxHeight;
     [HideInInspector] public float SpawnDistance => (floorNum - 5) * floorSize;
+
+    public System.Action WinEvent;
+    public System.Action LoseEvent;
     void Awake()
     {
         if (instance == null) instance = this;
