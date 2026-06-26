@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   floorSize: 1
-  totalFloors: 30
+  totalFloors: 60
   prefabFloors:
   - {fileID: 7594232591122265194, guid: 06022a84ff0255046aa9ce81a53eb9c9, type: 3}
   - {fileID: 7594232591122265194, guid: 1b39f0ab598e733489c9ce3dd0920b28, type: 3}
