@@ -58,20 +58,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98a03b7bdef5e74186993770362252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  floorSize: 2
+  floorSize: 1
   totalFloors: 30
   prefabFloors:
-  - {fileID: 7594232591122265194, guid: db0e2a73551c84045ae8ae2dd0abb22a, type: 3}
-  - {fileID: 7594232591122265194, guid: d72dc3a8db3004246bdd2b02fdff7bf2, type: 3}
-  - {fileID: 7594232591122265194, guid: 96f3aa74421e9144f8520ac0acf5458c, type: 3}
-  - {fileID: 7594232591122265194, guid: 23ab4757e0b972a4cac6c91d9c15bda4, type: 3}
-  - {fileID: 7594232591122265194, guid: 93ceff0dcee3f3847bf5ada5dc206af0, type: 3}
-  - {fileID: 7594232591122265194, guid: b868a361126e9154a9239e4fb2c6f839, type: 3}
-  - {fileID: 7594232591122265194, guid: 8f8b441615b00b540aaddf6ff6be335f, type: 3}
-  - {fileID: 7594232591122265194, guid: 967275218bc2d194dbb6be9624ef9acb, type: 3}
-  - {fileID: 7594232591122265194, guid: 771b9b45d4dc4fd409176f4ba05c0a9c, type: 3}
-  - {fileID: 7594232591122265194, guid: b575a156a4869b64397e0e6c8e7ea535, type: 3}
-  - {fileID: 7594232591122265194, guid: 7adbc3478d748a34eb7c038fc71a0aa2, type: 3}
+  - {fileID: 7594232591122265194, guid: 06022a84ff0255046aa9ce81a53eb9c9, type: 3}
+  - {fileID: 7594232591122265194, guid: 1b39f0ab598e733489c9ce3dd0920b28, type: 3}
+  - {fileID: 7594232591122265194, guid: 3d9dee267be5dec4581326c5806b2191, type: 3}
+  - {fileID: 7594232591122265194, guid: c5ff0682784de64448df7239c0577cc6, type: 3}
+  - {fileID: 7594232591122265194, guid: 6312c386d1984d24a87749b5ce394f91, type: 3}
+  - {fileID: 7594232591122265194, guid: d1272f6da8d2c1043bad23108126741e, type: 3}
+  - {fileID: 7594232591122265194, guid: d84f90a3285700040bd4e50c0bc186d3, type: 3}
+  - {fileID: 7594232591122265194, guid: 3ae7b9cfb6bf8b54eb59aab1d36325cd, type: 3}
+  - {fileID: 7594232591122265194, guid: c14cb6fca1b500d49bf76742072ab394, type: 3}
+  - {fileID: 7594232591122265194, guid: fc5817a50fa3fa341abfa47fa410783e, type: 3}
+  - {fileID: 7594232591122265194, guid: 7e84909d64b26f34c9b1442fc93697bb, type: 3}
+  - {fileID: 7594232591122265194, guid: 063df6c8336d7c345ba96e1a2234a4e0, type: 3}
+  - {fileID: 7594232591122265194, guid: 6312c386d1984d24a87749b5ce394f91, type: 3}
+  - {fileID: 7594232591122265194, guid: d1272f6da8d2c1043bad23108126741e, type: 3}
   CurrentFloors: []
   Finished: 0
   MaxPlayerHeight: 0

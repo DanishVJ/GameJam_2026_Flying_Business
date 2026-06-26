@@ -277,6 +277,6 @@ MonoBehaviour:
   throwableObject: {fileID: 1190842384435321114}
   timeBeforeThrowing: 6
   timeoutTime: 5
-  throwSpeed: 5
+  throwSpeed: 2
   targetsPlayer: 1
-  distanceOffset: 4
+  distanceOffset: 2
