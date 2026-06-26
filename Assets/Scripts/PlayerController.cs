@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxTurnAngle;
     [SerializeField] private float maxDistanceFromCenter;
     [SerializeField] private ParticleSystem particle;
+    [SerializeField] private Animator anim;
     private bool _isFlying = false;
     private float _turnDirection;
     public bool IsDead;
@@ -39,8 +40,8 @@ public class PlayerController : MonoBehaviour
 
     public void Fly(float onOff)
     {
-        if (onOff == 1f) _isFlying = true;
-        else _isFlying = false;
+        if (onOff == 1f) { _isFlying = true; anim.SetBool("Idle", false); }
+        else { _isFlying = false; anim.SetBool("Idle", true); }
     }
     public void Turn(float dir)
     {

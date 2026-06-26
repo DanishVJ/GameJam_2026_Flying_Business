@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1665456313751190756}
   - component: {fileID: 6910937460622709926}
   - component: {fileID: 4983858435164264842}
+  - component: {fileID: 4270882011897095118}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -105,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7daa222f87550a14aaf2ae9f544de35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollider
+  sfxName: 
 --- !u!61 &4983858435164264842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,6 +153,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4, y: 0.2}
   m_EdgeRadius: 0
+--- !u!95 &4270882011897095118
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119590058635875936}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bba6099ddd037e14e9b1f9cfb461a6ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1426291057870372494
 GameObject:
   m_ObjectHideFlags: 0
