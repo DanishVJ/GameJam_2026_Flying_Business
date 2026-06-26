@@ -17,7 +17,9 @@ public class GMS_Playing : IState
         
         SceneManager.sceneLoaded += EnterAfterLoad;
         AudioManager.instance.PlayMusic("Music");
-        
+        _sceneHasLoaded = false;
+
+
     }
 
     public void Execute()
@@ -47,6 +49,7 @@ public class GMS_Playing : IState
         SceneManager.sceneLoaded -= EnterAfterLoad;
         _player.GetComponent<PlayerController>().PlayerDied -= PlayerDied;
         AudioManager.instance.SFXSource.Stop();
+        _gm.Finished = false;
     }
     public void EnterAfterLoad(Scene scene, LoadSceneMode mode)
     {
