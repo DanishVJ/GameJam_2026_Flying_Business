@@ -15,7 +15,7 @@ public class GMS_Playing : IState
         InputManager.instance.ChangeState(InputStates.PLAYING);
         
         SceneManager.sceneLoaded += EnterAfterLoad;
-        _gm.Finished = false;
+        
         
     }
 
@@ -43,6 +43,7 @@ public class GMS_Playing : IState
     }
     public void EnterAfterLoad(Scene scene, LoadSceneMode mode)
     {
+        _gm.Finished = false;
         _gm.CurrentFloors.Clear();
         _gm.ResetFloorNum();
         _gm.SpawnANewFloor();
