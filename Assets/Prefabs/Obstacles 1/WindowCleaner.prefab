@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7daa222f87550a14aaf2ae9f544de35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleColider
+  sfxName: Thump
 --- !u!1 &6952533960164940564
 GameObject:
   m_ObjectHideFlags: 0

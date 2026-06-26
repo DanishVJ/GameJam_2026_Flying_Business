@@ -11,6 +11,7 @@ public class ObjectThrower : MonoBehaviour
     [SerializeField] private float throwSpeed;
     [SerializeField] private bool targetsPlayer;
     [SerializeField] private float distanceOffset;
+    [SerializeField] private string ThrowSoundName;
 
 
     void OnEnable()
@@ -25,6 +26,7 @@ public class ObjectThrower : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeThrowing);
         _thrownObject.GetComponent<ObstacleCollider>().enabled = true;
         _thrownObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        AudioManager.instance.PlaySFX(ThrowSoundName);
         if (targetsPlayer)
         {
             _thrownObject.GetComponent<Rigidbody2D>().linearVelocity = throwSpeed * (GameObject.FindFirstObjectByType<PlayerController>().transform.position - transform.position + distanceOffset * Vector3.up).normalized;

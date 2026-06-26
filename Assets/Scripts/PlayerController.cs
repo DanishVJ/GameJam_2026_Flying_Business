@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem particle;
     private bool _isFlying = false;
     private float _turnDirection;
+    public bool IsDead;
 
     public System.Action PlayerDied;
 
@@ -63,7 +64,15 @@ public class PlayerController : MonoBehaviour
         PlayerDied?.Invoke();
         speed = speed * 0.5f;
         particle.Play();
+        IsDead = true;
+        StartCoroutine(PlaySFXAfter(0.2f));
     }
-    
+    private IEnumerator PlaySFXAfter(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        AudioManager.instance.PlaySFX("Falling");
+
+    }
+
 
 }

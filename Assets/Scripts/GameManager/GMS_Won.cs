@@ -22,5 +22,6 @@ public class GMS_Won : IState
     {
         // if win tune is still running kill it
         InputManager.instance.RestartAction -= _gm.EnterPlay;
+        AudioManager.instance.SFXSource.Stop();
     }
 }

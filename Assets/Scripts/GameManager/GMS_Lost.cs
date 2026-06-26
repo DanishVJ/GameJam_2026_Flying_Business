@@ -22,5 +22,6 @@ public class GMS_Lost : IState
     {
         // if lost tune is still running, kill it
         InputManager.instance.RestartAction -= _gm.EnterPlay;
+        AudioManager.instance.SFXSource.Stop();
     }
 }

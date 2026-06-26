@@ -26,15 +26,15 @@ public class InputManager : MonoBehaviour
 
     public void OnSpace(InputValue value)
     {
-        if (_currentInputState == InputStates.START && value.Get<float>() < 0)
+        if (_currentInputState == InputStates.START && value.Get<float>() > 0)
         {
             StartAction?.Invoke();
         }
-        else if (_currentInputState == InputStates.LOST && value.Get<float>() < 0)
+        else if (_currentInputState == InputStates.LOST && value.Get<float>() > 0)
         {
             RestartAction?.Invoke();
         }
-        else if (_currentInputState == InputStates.WON && value.Get<float>() < 0)
+        else if (_currentInputState == InputStates.WON && value.Get<float>() > 0)
         {
             RestartAction?.Invoke();
         }
@@ -50,5 +50,7 @@ public class InputManager : MonoBehaviour
             TurnAction?.Invoke(value.Get<float>());
         }
     }
+
+    
 
 }

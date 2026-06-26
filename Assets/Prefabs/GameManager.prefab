@@ -255,7 +255,7 @@ MonoBehaviour:
   MusicSounds: []
   SFX:
   - Name: Papers
-    Clip: {fileID: 8300000, guid: 779d624955300f24fb985e69b887900a, type: 3}
+    Clip: {fileID: 8300000, guid: 91552f629319f3a448e5b09152abac5e, type: 3}
   - Name: Eating
     Clip: {fileID: 8300000, guid: 2238c1347bcef2e40a7d885735c73d59, type: 3}
   - Name: Coffee
